@@ -1,0 +1,35 @@
+<html lang="en" ng-app="ParseCssApp">
+
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <meta content="initial-scale=1" name="viewport" />
+</head>
+
+<body ng-controller="AppCtrl">
+    <div class="container">
+        <div class="jumbotron header">
+            <h1>What are styles on the site</h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form ng-submit="submit()">
+                        <div class="input-group">
+                            <input class="form-control form-control ng-pristine ng-valid ng-touched input-lg" placeholder="Enter your url" type="text" name="siteUrl" ng-model="siteUrl">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success btn-lg" type="submit">Go!</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <loader ng-if="isLoading && !css.length"></loader>
+        <style-list ng-if="css.length" styles="css"><style-list>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-resource.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

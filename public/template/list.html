@@ -1,0 +1,8 @@
+<div ng-repeat="style in styles">
+    <header class="title" ng-click="showContent(style)">
+        {{::style.rule}}
+    </header>
+    <article class="content" ng-show="style === showingStyle">
+        <pre>{{::style.style | json}}</pre>
+    </article>
+</div>
