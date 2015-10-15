@@ -1,6 +1,6 @@
 angular.module('ParseCssService', ['ngResource'])
     .factory('getCss', function($resource) {
-        var url = 'https://shrouded-caverns-8889.herokuapp.com/api/css?siteUrl=:siteUrl';
+        var url = 'https://murmuring-harbor.herokuapp.com/api/css?siteUrl=:siteUrl';
 
         var resource = $resource(url, {'siteUrl': '@siteUrl'}, {
             query: {
